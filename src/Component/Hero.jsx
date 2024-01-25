@@ -2,7 +2,10 @@ import Hero from "../assets/hero.jpg"
 
 function hero(){
     return (
-        <img className="w-full" src={Hero} alt="" />
+        <div>
+             <img className="w-full" src={Hero} alt="" />
+        </div>
+       
 
     )
 }
