@@ -1,9 +1,9 @@
-import Hero from "../assets/hero.jpg"
+import Banner from "../assets/Hero.jpg"
 
 function hero(){
     return (
         <div>
-             <img className="w-full" src={Hero} alt="" />
+             <img className="w-full" src={Banner} alt="" />
         </div>
        
 
