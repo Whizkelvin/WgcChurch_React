@@ -32,7 +32,7 @@ const Navbar = () => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
+            className='p-4 font-bold hover:bg-red-600 rounded-xl m-2 cursor-pointer duration-300 hover:text-white '
           >
             {item.text}
           </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 border-b rounded-xl hover:bg-blue-400 duration-300 hover:text-black cursor-pointer border-black'
+            className='p-4 border-b rounded-xl hover:bg-blue-300 duration-300 hover:text-black cursor-pointer border-black'
           >
             {item.text}
           </li>
