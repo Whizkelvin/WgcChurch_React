@@ -15,11 +15,11 @@ const Navbar = () => {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: 'Messages' },
-    { id: 3, text: 'Services' },
-    { id: 4, text: 'Anouncement' },
-    { id: 5, text: 'Contact' },
+    { id: '#Home', text: 'Home' },
+    { id: '#Messages', text: 'Messages' },
+    { id: '#Services', text: 'Services' },
+    { id: '#Anouncement', text: 'Anouncement' },
+    { id: '#Contact', text: 'Contact' },
   ];
 
   return (
@@ -29,40 +29,39 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <ul className='hidden lg:flex'>
-        {navItems.map(item => (
+        {navItems.map(item => (<a href={item.id}>
           <li
             key={item.id}
-            className='p-4 font-bold text-xl hover:bg-red-600 rounded-xl m-2 cursor-pointer duration-300 hover:text-white '
+            className='p-4 font-bold text-xl hover:bg-red-600 hover:duration-500 hover:ease-in-out   rounded-xl m-2 cursor-pointer duration-300 hover:text-white '
           >
             {item.text}
-          </li>
+          </li></a>
         ))}
       </ul>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block lg:hidden text-black'>
+      <div onClick={handleNav} className='block lg:hidden text-black mr-4'>
         {nav ? <IoCloseSharp  size={30} /> : <TfiAlignRight  size={30} />}
       </div>
 
       {/* Mobile Navigation Menu */}
       <ul
         className={
-          nav
-            ? 'fixed md:hidden left-0 top-0 w-[70%] h-full border-r border-r-blue-900 bg-white ease-in-out duration-500'
-            : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
-        }
+          nav ? 'absolute top-20 left-0  bg-blue-200  w-full lg:hidden' : ' hidden'
+            
+        } onClick={handleNav}
       >
         {/* Mobile Logo */}
-        <h1 className='p-4 font-bold text-center'>Beautiful Church - Beautiful People</h1>
+        <h1 className='p-4 font-bold font-serif text-center text-lg text-red-600'>Beautiful Church - Beautiful People</h1>
 
         {/* Mobile Navigation Items */}
-        {navItems.map(item => (
+        {navItems.map(item => ( <a href={item.id}>
           <li
             key={item.id}
-            className='p-4 border-b rounded-xl hover:bg-blue-300 duration-300 hover:text-black cursor-pointer border-black'
+            className='p-4 font-semibold border-b  hover:bg-blue-300 duration-300 hover:text-black cursor-pointer border-black text-center mb-3'
           >
             {item.text}
-          </li>
+          </li></a>
         ))}
       </ul>
     </div>

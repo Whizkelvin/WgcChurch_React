@@ -3,7 +3,12 @@ import PastorPic from '../assets/Pastor.jpg'
 function Messages () {
 
     return (
-        <div id='Containner' className=' px-12 lg:grid lg:grid-cols-4 lg:gap-6 lg:grid-rows-6 shadoow-md tanstsion-all duration-500 ease-in-out'>
+
+    <div id='Messages' className='scroll-mt-[105px]' >
+        <h1 className=" bg-blue-900 p-4 text-center text-lg mt-8 text-white font-bold uppercase lg:text-2xl ">Here, you can download or listen to our Family Sunday Service messages.</h1>
+      
+        <div  className=' px-12 lg:grid lg:grid-cols-4 lg:gap-6 lg:grid-rows-6 shadoow-md tanstsion-all duration-500 ease-in-out'>
+
             {/* 7th January, 2024  */}
             <section className='justify-center items-center text-center space-y-5 border border-1-black p-5 rounded-xl mt-8'>
                     <img className='border-0 rounded-full w-full' src={PastorPic} alt="Ps Derrick Pic" />
@@ -39,6 +44,7 @@ function Messages () {
             
            
         </div>
+    </div>
        
     )
 }
