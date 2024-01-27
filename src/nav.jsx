@@ -23,9 +23,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className=' flex justify-between items-center h-24 w-full mx-auto px-4 text-black sticky top-0 z-50 bg-blue-200'>
+    <div className=' flex justify-between items-center h-[75px] w-full mx-auto px-4 text-black sticky top-0 z-50 bg-blue-200'>
       {/* Logo */}
-      <img className='h-16' src={Logo} alt="" />
+     <a href="#Home"> <img  className='h-24' src={Logo} alt="" /></a>
 
       {/* Desktop Navigation */}
       <ul className='hidden lg:flex'>
