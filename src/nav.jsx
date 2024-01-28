@@ -47,7 +47,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <ul
         className={
-          nav ? 'absolute top-20 left-0  bg-blue-200  w-full lg:hidden' : ' hidden'
+          nav ? 'absolute top-16 left-0  bg-blue-200  w-full lg:hidden' : ' hidden'
             
         } onClick={handleNav}
       >
